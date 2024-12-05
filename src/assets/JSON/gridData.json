@@ -1,0 +1,45 @@
+[
+    {
+      "image": "../assets/IMG/1.jpg",
+      "alt": "Imagen 1",
+      "link": "#",
+      "text": "EL CAMINO DE LOS REYES"
+    },
+    {
+      "image": "../assets/IMG/2.jpg",
+      "alt": "Imagen 2",
+      "link": "#",
+      "text": "PALABRAS RADIANTES"
+    },
+    {
+      "image": "../assets/IMG/3.jpg",
+      "alt": "Imagen 3",
+      "link": "#",
+      "text": "DANZANTE DEL FILO"
+    },
+    {
+      "image": "../assets/IMG/4.png",
+      "alt": "Imagen 4",
+      "link": "#",
+      "text": "JURAMENTADA"
+    },
+    {
+      "image": "../assets/IMG/5.jpg",
+      "alt": "Imagen 5",
+      "link": "#",
+      "text": "ESQUIRLA DEL AMANECER"
+    },
+    {
+      "image": "../assets/IMG/6.jpg",
+      "alt": "Imagen 6",
+      "link": "#",
+      "text": "EL RITMO DE LA GUERRA"
+    },
+    {
+      "image": "../assets/IMG/7.jpg",
+      "alt": "Imagen 7",
+      "link": "#",
+      "text": "VIENTO Y VERDAD (9/12/24 ESP)"
+    }
+  ]
+  

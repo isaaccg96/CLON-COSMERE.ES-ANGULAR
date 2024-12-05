@@ -1,0 +1,16 @@
+<div class="main-container">
+  <app-carrusel *ngIf="showCarousel"></app-carrusel>
+  <app-header></app-header> <!-- Componente de la barra de navegación -->
+  
+  <!-- Video con src dinámico -->
+  <video class="background-video" autoplay loop muted playsinline [src]="videoSrc">
+    Tu navegador no soporta videos HTML5.
+  </video>
+  
+  <div class="content">
+    <router-outlet></router-outlet> <!-- Área donde se cargan los componentes dinámicos -->
+  </div>
+  
+  <!-- El pie de página solo se muestra si showFooter es true -->
+  <app-footer *ngIf="showFooter"></app-footer> <!-- Componente del pie de página -->
+</div>
