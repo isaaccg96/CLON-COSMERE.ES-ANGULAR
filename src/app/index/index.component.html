@@ -1,0 +1,156 @@
+
+<body>
+
+  <div class="media-container">
+    <div class="media-item-container">
+      <div class="image-wrapper">
+        <img src="../assets/IMG/graficocon-planeta-de-fondo-2-scaled-1-2048x1219.jpg" alt="Imagen 1"
+          class="media-item image">
+        <div class="image-text">
+          <a href="#" class="image-link">¿QUÉ ES EL COSMERE?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Vex16t3KWPw" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="media-item-container">
+      <div class="image-wrapper">
+        <img src="../assets/IMG/guia-de-lectura-6.5-copia-2048x1229.jpg" alt="Imagen 2" class="media-item image">
+        <div class="image-text">
+          <a href="#" class="image-link">ORDEN DE LECTURA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Seccion 2-->
+  <div class="image-gallery">
+    <div *ngFor="let item of visibleGalleryData" class="image-item"
+      [style.background-image]="'url(' + item.imageUrl + ')'">
+      <button class="image-btn">{{ item.buttonText }}</button>
+      <a class="image-link2" [href]="item.linkUrl">{{ item.linkText }}</a>
+    </div>
+  </div>
+
+  <!-- Botón para cargar más contenido -->
+  <div class="load-more" *ngIf="visibleGalleryData.length < galleryData.length">
+    <button (click)="loadMore()">CARGAR MÁS</button>
+  </div>
+
+
+  <!-- Sección 3 -->
+  <div class="flex-container">
+    <div class="flex-item">
+      <!-- Triángulo a la izquierda del título -->
+      <div class="triangle"></div>
+      <!-- Título INSTAGRAM -->
+      <h3 class="instagram-title">INSTAGRAM</h3>
+      <br>
+      <br>
+      <br>
+      <!-- Logo de Instagram y nombre de cuenta -->
+      <div class="instagram-logo">
+        <i class="fab fa-instagram instagram-icon"></i>
+        <span>COSMERE_ES</span>
+      </div>
+      <!-- Widget de Instagram -->
+      <div class="elfsight-app-502163a5-7c71-4635-b882-0b47b0f8aaac" data-elfsight-app-lazy></div>
+    </div>
+
+    <div class="flex-item twitter-feed">
+      <!-- Triángulo a la izquierda del título -->
+      <div class="triangle"></div>
+      <!-- Título TWITTER -->
+      <h3 class="instagram-title">TWITTER</h3>
+      <br>
+      <br>
+      <!-- Widget de Twitter -->
+      <div>
+        <a class="twitter-timeline" href="https://twitter.com/Cosmere_es?ref_src=twsrc%5Etfw" data-width="500"
+          data-height="1000" data-theme="dark">Tweets by Cosmere_es</a>
+      </div>
+    </div>
+
+    <div class="flex-item">
+      <!-- Triángulo a la izquierda del título -->
+      <div class="triangle"></div>
+      <!-- Título REDES -->
+      <h3 class="instagram-title">REDES</h3>
+      <!-- Línea debajo del título -->
+      <hr class="line-separator">
+      <!-- Iconos de Redes Sociales -->
+      <div class="social-icons">
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.patreon.com" target="_blank" class="social-icon">
+          <i class="fab fa-patreon"></i>
+        </a>
+      </div>
+      <!-- Texto Webs Afiliadas -->
+      <div class="webs-afiliadas">
+        <p>Webs Afiliadas</p>
+      </div>
+      <!-- Enlaces centrados, uno debajo del otro -->
+      <div class="centered-links">
+        <a href="#link1">17SHARD</a>
+        <a href="#link2">HUIJI-WIKI</a>
+      </div>
+      <!-- Título ARCHIVOS -->
+      <div class="archivos-title">
+        <p>ARCHIVOS</p>
+      </div>
+      <!-- Desplegable con meses -->
+      <div class="dropdown">
+        <button class="dropdown-btn">Elegir el mes</button>
+        <div class="dropdown-content">
+          <a href="#">Enero 2024</a>
+          <a href="#">Febrero 2024</a>
+          <a href="#">Marzo 2024</a>
+          <a href="#">Abril 2024</a>
+          <a href="#">Mayo 2024</a>
+          <a href="#">Junio 2024</a>
+          <a href="#">Julio 2024</a>
+          <a href="#">Agosto 2024</a>
+          <a href="#">Septiembre 2024</a>
+          <a href="#">Octubre 2024</a>
+          <a href="#">Noviembre 2024</a>
+          <a href="#">Diciembre 2024</a>
+          <a href="#">Enero 2023</a>
+          <a href="#">Febrero 2023</a>
+          <a href="#">Marzo 2023</a>
+          <a href="#">Abril 2023</a>
+          <a href="#">Mayo 2023</a>
+          <a href="#">Junio 2023</a>
+          <a href="#">Julio 2023</a>
+          <a href="#">Agosto 2023</a>
+          <a href="#">Septiembre 2023</a>
+          <a href="#">Octubre 2023</a>
+          <a href="#">Noviembre 2023</a>
+          <a href="#">Diciembre 2023</a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <hr class="line-separator">
+      <!-- Triángulo a la izquierda del título -->
+      <div class="triangle"></div>
+      <!-- Título TWITTER -->
+      <h3 class="instagram-title">COSMERE.ES</h3>
+    </div>
+
+
+  </div>
+
+
+</body>

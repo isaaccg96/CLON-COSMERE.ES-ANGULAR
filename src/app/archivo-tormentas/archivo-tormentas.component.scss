@@ -1,0 +1,93 @@
+.divTitulo {
+  margin-left: 25%;
+  width: 50%;
+  margin-top: 3%;
+}
+
+/* Triángulo a la izquierda del título INSTAGRAM */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid #FF9500; /* Triángulo de color naranja brillante */
+  border-top: 7.5px solid transparent;
+  border-bottom: 7.5px solid transparent;
+  margin-right: 10px; /* Espacio entre el triángulo y el título */
+  display: inline-block; /* Hace que el triángulo esté alineado al lado del texto */
+  align-self: center; /* Asegura que el triángulo se alinee verticalmente con el texto */
+}
+
+.instagram-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white; /* Texto en blanco */
+  display: inline-flex; /* Usamos inline-flex para alinear el triángulo con el texto */
+  align-items: center; /* Centra el triángulo y el texto */
+}
+
+
+/* Contenedor del grid */
+.grid-container {
+  margin-left: 25%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  grid-template-rows: repeat(3, auto); /* Tres filas */
+  gap: 5px; /* Espacio entre los items */
+  padding: 20px;
+  position: relative; /* Necesario para el posicionamiento absoluto del texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+}
+
+/* Estilo para cada item */
+.grid-item {
+  text-align: center; /* Centrar el contenido */
+  background-color: rgba(12, 12, 12, 0.8); /* Fondo negro transparente */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(29, 29, 29);
+  position: relative; /* Necesario para colocar la línea debajo */
+}
+
+/* Estilo para las imágenes */
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Estilo para los enlaces */
+.grid-item a {
+  text-align: left;
+  display: block;
+  padding: 5%;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: 'Montserrat';
+}
+
+.grid-item a:hover {
+  color: #FF9500;
+}
+
+/* Línea debajo del grid-item al pasar el cursor */
+.grid-item::after {
+  content: ''; /* Crea una línea vacía debajo */
+  position: absolute;
+  bottom: -2px; /* Coloca la línea justo debajo del div */
+  left: 0;
+  width: 0%; /* La línea comienza con un ancho de 0 */
+  height: 2px; /* Altura de la línea */
+  background-color: #FF9500; /* Color naranja brillante */
+  
+  transition: width 0.2s ease-in-out, box-shadow 0.5s ease-out; /* Transición más lenta para la expansión y el resplandor */
+}
+
+/* La línea se expande al pasar el cursor sobre el div */
+.grid-item:hover::after {
+  width: 100%; /* La línea se expande al 100% del ancho del div */
+  box-shadow: 0 0 8px 2px #FF9500; /* Efecto de resplandor brillante */
+  height: 4px;
+}

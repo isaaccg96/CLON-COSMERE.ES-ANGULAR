@@ -1,0 +1,121 @@
+/* General Footer Styles */
+footer {
+    color: #9c9c9c; /* Color de las letras del footer */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con 50% de transparencia */
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+  }
+  
+/* Top Section - Barra Naranja */
+.footer-top {
+    background-color: #ff9800;
+    padding: 2px 0; /* Barra más delgada */
+    text-align: center;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra interna de la barra */
+  }
+  
+  
+  /* Enlace "Suscríbete" */
+  .newsletter-link {
+    color: #fff; /* Color blanco para el texto */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5; /* Centrado vertical */
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 0; /* Espaciado vertical */
+    
+  }
+  
+  /* Main Section */
+  .footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 70px;
+    background-color: #111;
+    font-weight: bold;
+    letter-spacing: -1px; /* Reduce el espacio entre las letras, lo hace más compacto */
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo negro con 50% de transparencia */
+  }
+  
+  .footer-left {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    margin-right: 80px;
+  }
+  
+  .footer-center {
+    text-align: left;
+  }
+  
+  .footer-center a {
+    color: #9c9c9c; /* Cambia el color de los enlaces */
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  
+  .footer-center p {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .footer-right {
+    text-align: left;
+    margin-right: 170px;
+  }
+  
+  /* Redes sociales */
+  .social-icons {
+    margin-bottom: 10px; /* Espacio entre los iconos y el texto de contacto */
+  }
+  
+  .social-icons a {
+    color: #9c9c9c;
+    margin: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .footer-right p {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+/* Scroll to Top Button */
+.footer-scroll-top {
+    background-color: #ff9800;  /* Fondo naranja */
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Flecha de volver al inicio */
+  .footer-scroll-top a {
+    color: #fff; /* Flecha blanca */
+    text-decoration: none;
+    font-size: 28px; /* Tamaño de la flecha */
+    line-height: 0;  /* Alineación correcta */
+    transform: rotate(90deg); /* Rotar la flecha hacia arriba */
+  }
+  
+  /* Efecto de brillo rojo en hover */
+  .footer-scroll-top:hover {
+    box-shadow: 0 0 20px 10px rgba(255, 35, 83, 0.7); /* Brillo rojo alrededor del botón */
+  }
+  

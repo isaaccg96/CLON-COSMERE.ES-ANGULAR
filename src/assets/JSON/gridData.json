@@ -1,0 +1,59 @@
+[
+    {
+      "image": "../assets/IMG/1.jpg",
+      "alt": "Imagen 1",
+      "link": "/ficha",
+      "text": "EL CAMINO DE LOS REYES",
+      "id": 1,
+      "descripcion": "EL CAMINO DE LOS REYES EL CAMINO DE LOS REYES EL CAMINO DE LOS REYES "
+    },
+    {
+      "image": "../assets/IMG/2.jpg",
+      "alt": "Imagen 2",
+      "link": "/ficha",
+      "text": "PALABRAS RADIANTES",
+      "id": 2,
+      "descripcion": "PALABRAS RADIANTESPALABRAS RADIANTESPALABRAS RADIANTESPALABRAS RADIANTES "
+    },
+    {
+      "image": "../assets/IMG/3.jpg",
+      "alt": "Imagen 3",
+      "link": "/ficha",
+      "text": "DANZANTE DEL FILO",
+      "id": 3,
+      "descripcion": "DANZANTE DEL FILODANZANTE DEL FILODANZANTE DEL FILODANZANTE DEL FILODANZANTE DEL FILO "
+    },
+    {
+      "image": "../assets/IMG/4.png",
+      "alt": "Imagen 4",
+      "link": "/ficha",
+      "text": "JURAMENTADA",
+      "id": 4,
+      "descripcion": "JURAMENTADAJURAMENTADAJURAMENTADAJURAMENTADAJURAMENTADA"
+    },
+    {
+      "image": "../assets/IMG/5.jpg",
+      "alt": "Imagen 5",
+      "link": "/ficha",
+      "text": "ESQUIRLA DEL AMANECER",
+      "id": 5,
+      "descripcion": "ESQUIRLA DEL AMANECERESQUIRLA DEL AMANECERESQUIRLA DEL AMANECERESQUIRLA DEL AMANECERESQUIRLA DEL AMANECER"
+    },
+    {
+      "image": "../assets/IMG/6.jpg",
+      "alt": "Imagen 6",
+      "link": "/ficha",
+      "text": "EL RITMO DE LA GUERRA",
+      "id": 6,
+      "descripcion": "EL RITMO DE LA GUERRAEL RITMO DE LA GUERRAEL RITMO DE LA GUERRAEL RITMO DE LA GUERRA"
+    },
+    {
+      "image": "../assets/IMG/7.jpg",
+      "alt": "Imagen 7",
+      "link": "/ficha",
+      "text": "VIENTO Y VERDAD (9/12/24 ESP)",
+      "id": 6,
+      "descripcion": "VIENTO Y VERDAD (9/12/24 ESP)VIENTO Y VERDAD (9/12/24 ESP)VIENTO Y VERDAD (9/12/24 ESP)VIENTO Y VERDAD (9/12/24 ESP)"
+    }
+  ]
+  

@@ -1,0 +1,17 @@
+<div *ngIf="producto; else noProducto">
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>{{ producto.text }}</h2>
+        <p>{{ producto.descripcion }}</p>
+      </div>
+      <div class="grid-item">
+        <img [src]="producto.image" [alt]="producto.alt" class="producto-image" />
+      </div>
+    </div>
+  </div>
+  
+  <!-- Plantilla alternativa si no se encuentra el producto -->
+  <ng-template #noProducto>
+    <p>Producto no encontrado. Verifica la URL.</p>
+  </ng-template>
+  

@@ -1,0 +1,627 @@
+/* Contenedor de imágenes y video */
+.media-container {
+  display: flex;
+  justify-content: center;
+  /* Centra todo el contenido */
+  align-items: flex-start;
+  /* Alinea todos los elementos al principio (borde superior) */
+  padding-top: 0;
+  margin-top: 3%;
+  /* Reduce el margen superior */
+  width: 100%;
+}
+
+/* Contenedor individual de cada imagen */
+.media-item-container {
+  text-align: center;
+  /* Centra las imágenes y los textos dentro del contenedor */
+  margin: 0;
+  /* Elimina el margen entre los elementos */
+  width: 22%;
+  /* Reduce el ancho de cada imagen para acercarlas al video */
+  box-sizing: border-box;
+  /* Incluye los márgenes en el cálculo del ancho */
+}
+
+/* Contenedor con borde alrededor de la imagen y el texto */
+.image-wrapper {
+  position: relative;
+  /* Necesario para posicionar el pseudo-elemento ::after */
+  border-left: 1px solid rgba(53, 51, 51, 0.5);
+  /* Borde izquierdo */
+  border-top: 1px solid rgba(53, 51, 51, 0.5);
+  /* Borde superior */
+  padding: 5%;
+  /* Más espacio entre el borde y el contenido */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo negro con 50% de transparencia */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  /* Sombra */
+}
+
+/* Barra naranja en el hover del contenedor */
+.image-wrapper::after {
+  content: '';
+  /* Crea un pseudo-elemento vacío */
+  position: absolute;
+  /* Lo coloca respecto al contenedor */
+  bottom: 0;
+  /* Barra en la parte inferior del contenedor */
+  left: 0;
+  /* Empieza desde el borde izquierdo */
+  width: 0;
+  /* Al principio no se ve */
+  height: 4px;
+  /* Altura de la barra */
+  background-color: #ff9800;
+  /* Color de la barra */
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+  /* Transición suave */
+}
+
+/* Hover en el contenedor: barra naranja */
+.image-wrapper:hover::after {
+  width: 100%;
+  /* Expande la barra a lo largo del contenedor */
+  box-shadow: 0 0 10px 4px rgba(255, 152, 0, 0.8);
+  /* Efecto de brillo */
+}
+
+/* Estilos para las imágenes */
+.media-item.image {
+  width: 100%;
+  /* 100% del contenedor para hacerlo flexible */
+  height: auto;
+  object-fit: cover;
+  /* Asegura que la imagen se recorte si es necesario */
+}
+
+/* Contenedor del video */
+.video-container {
+  position: relative;
+  /* Posicionamiento para el iframe */
+  width: 45%;
+  /* Aumento el ancho del video al 45% */
+  margin: 0 2%;
+  /* Reduce los márgenes a los lados del video */
+  background-color: black;
+  /* Fondo negro */
+  padding-bottom: 25%;
+  /* Usamos padding-bottom para mantener la proporción 16:9 */
+}
+
+/* iframe dentro del contenedor del video */
+.video-container iframe {
+  position: absolute;
+  /* Posiciona el iframe dentro del contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Ocupa todo el ancho del contenedor */
+  height: 100%;
+  /* Mantiene la proporción 16:9 */
+  border: none;
+  /* Elimina los bordes del iframe */
+}
+
+/* Estilo para el texto debajo de las imágenes */
+.image-text {
+  margin-top: 5%;
+  /* Espacio entre la imagen y el texto */
+  text-align: left;
+  /* Centra el texto */
+}
+
+/* Estilo para el enlace debajo de las imágenes */
+.image-link {
+  color: white;
+  /* Color del enlace */
+  text-decoration: none;
+  /* Sin subrayado */
+  font-weight: bolder;
+  font-size: 21px;
+  /* Tamaño de fuente relativo */
+  display: block;
+  /* Hace que el enlace sea un bloque */
+  position: relative;
+  /* Necesario para la pseudo-clase ::after */
+  max-width: 90%;
+  /* Limita el ancho máximo del enlace */
+}
+
+.image-link:hover {
+  color: #FF9500;
+}
+
+/* Media Queries: Ajustes en pantallas más pequeñas */
+
+/* Para pantallas pequeñas: un solo elemento por fila */
+@media (max-width: 768px) {
+  .media-item-container {
+    width: 90%;
+    /* Solo un elemento por fila */
+    margin: 2% auto;
+    /* Centrado con márgenes automáticos */
+  }
+
+  .video-container iframe {
+    width: 90%;
+    /* Hace que el video ocupe el 90% del contenedor */
+    height: 450px;
+    /* Aumenta la altura del video para pantallas pequeñas */
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles): Ajuste total */
+@media (max-width: 480px) {
+  .media-item-container {
+    width: 100%;
+    /* Un elemento por fila */
+    margin: 2% auto;
+    /* Márgenes más pequeños en móviles */
+  }
+
+  .video-container iframe {
+    width: 100%;
+    /* Video de ancho completo en pantallas móviles */
+    height: 300px;
+    /* Reducir la altura para móviles */
+  }
+
+  .image-link {
+    font-size: 1rem;
+    /* Reducir el tamaño de la fuente en móviles */
+  }
+}
+
+//Seccion 2:
+
+
+/* Contenedor de la galería de imágenes */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Dos columnas */
+  grid-template-rows: repeat(3, auto);
+  /* Tres filas automáticas */
+  gap: 30px;
+  /* Espacio entre las imágenes */
+  margin-top: 2%;
+  margin-left: 6%;
+  /* Margen izquierdo en porcentaje */
+  margin-right: 6%;
+  /* Margen derecho en porcentaje */
+  width: 90%;
+  /* Asegura que la galería ocupe el 90% del contenedor */
+}
+
+/* Contenedor individual de cada imagen */
+.image-item {
+  position: relative;
+  width: 100%;
+  gap: 2%;
+  aspect-ratio: 16 / 9;
+  /* Proporción 16:9 */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  /* Asegura que el brillo ascendente no se salga del div */
+}
+
+/* Efecto de la línea naranja en el borde inferior */
+.image-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  /* Línea invisible al inicio */
+  height: 3px;
+  /* Altura de la línea */
+  background-color: orange;
+  transition: width 0.3s ease;
+  /* Animación del ancho */
+}
+
+/* Efecto de brillo ascendente */
+.image-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255, 159, 25, 0.5), transparent);
+  /* Brillo naranja ascendente */
+  opacity: 0;
+  /* Inicialmente invisible */
+  transition: opacity 0.3s ease;
+  /* Animación de aparición del brillo */
+  z-index: 1;
+  /* Asegura que el brillo esté debajo del texto y el botón */
+  mix-blend-mode: screen;
+  /* Permite que el brillo se mezcle con la imagen sin taparla */
+}
+
+/* Efecto al pasar el ratón: línea naranja y brillo ascendente */
+.image-item:hover::after {
+  width: 100%;
+  /* Línea completa al pasar el ratón */
+}
+
+.image-item:hover::before {
+  opacity: 1;
+  /* Aparece el brillo ascendente */
+}
+
+/* Capa para oscurecer la imagen de fondo */
+.image-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  /* 20% opaco para dar un 80% de oscuridad */
+  z-index: 0;
+  /* Asegura que esta capa esté debajo de la imagen y el brillo */
+}
+
+/* Estilo para el botón */
+.image-btn {
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  padding: 4px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  /* Asegura que el botón esté encima del brillo y la capa oscura */
+}
+
+.image-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor del botón */
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Estilo del botón */
+.load-more button {
+  background-color: #FF9500;
+  color: white;
+  border: 1px solid transparent;
+  border-left-color: rgb(247, 197, 33);
+  /* Borde izquierdo amarillo */
+  border-top-color: rgb(247, 197, 33);
+  /* Borde superior amarillo */
+  padding: 20px 70px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 2%;
+}
+
+/* Efecto hover: brillo amarillo */
+.load-more button:hover {
+  box-shadow: 0 0 15px 8px #b66a00;
+  /* Brillo amarillo */
+}
+
+/* Estilo para los enlaces debajo de los botones */
+.image-link2 {
+  margin-top: 1%;
+  /* Espacio entre el botón y el enlace */
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bold;
+  max-width: 50%;
+  /* Limita el ancho máximo del texto */
+  text-align: center;
+  /* Centra el texto dentro del ancho limitado */
+  display: block;
+  /* Convierte el enlace en un elemento de bloque */
+  margin: 0 auto;
+  /* Centra el enlace horizontalmente */
+  z-index: 2;
+  /* Asegura que el enlace esté encima de la capa oscura */
+}
+
+
+/* Media query para pantallas medianas */
+@media (max-width: 1024px) {
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas para pantallas medianas */
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .image-item {
+    padding-bottom: 56.25%;
+    /* Mantiene la proporción 16:9 para pantallas medianas */
+  }
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-gallery {
+    grid-template-columns: 1fr;
+    /* Una columna para pantallas pequeñas */
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .image-item {
+    padding-bottom: 56.25%;
+    /* Mantiene la proporción 16:9 para pantallas pequeñas */
+  }
+}
+
+/* Media query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .image-gallery {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .image-item {
+    padding-bottom: 56.25%;
+    /* Mantiene la proporción 16:9 en móviles */
+  }
+
+  .image-btn {
+    font-size: 14px;
+    /* Ajusta el tamaño del botón */
+    padding: 8px 16px;
+    /* Ajusta el tamaño del botón */
+  }
+
+  .image-link {
+    font-size: 1rem;
+    /* Reduce el tamaño del enlace */
+  }
+}
+
+
+
+
+/* Sección 3: */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  /* Espacio entre las columnas */
+  gap: 20px;
+  /* Espacio entre las columnas */
+  margin-left: 6%;
+  margin-right: 6%;
+  color: white;
+}
+
+.flex-item:nth-child(1) {
+  flex: 0 0 40%;
+  /* Primera columna, ocupa el 40% del contenedor */
+  padding: 20px;
+}
+
+.instagram-h3 {
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  font-size: 28px;
+}
+
+/* Triángulo a la izquierda del título INSTAGRAM */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid #FF9500;
+  /* Triángulo de color naranja brillante */
+  border-top: 7.5px solid transparent;
+  border-bottom: 7.5px solid transparent;
+  margin-right: 10px;
+  /* Espacio entre el triángulo y el título */
+  display: inline-block;
+  /* Hace que el triángulo esté alineado al lado del texto */
+  align-self: center;
+  /* Asegura que el triángulo se alinee verticalmente con el texto */
+}
+
+.instagram-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  /* Texto en blanco */
+  display: inline-flex;
+  /* Usamos inline-flex para alinear el triángulo con el texto */
+  align-items: center;
+  /* Centra el triángulo y el texto */
+}
+
+/* Logo de Instagram y nombre de cuenta */
+.instagram-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Espacio entre el ícono y el nombre */
+  color: white;
+  /* Texto en blanco */
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 5%;
+}
+
+.instagram-icon {
+  font-size: 36px;
+  /* Tamaño del logo */
+  margin-right: 5%;
+}
+
+.flex-item {
+  padding: 20px;
+  color: white;
+  border-top: 1px solid #363636;
+  border-left: 1px solid #363636;
+  background-color: rgba(15, 15, 15, 0.5);
+  /* Negro con 70% de opacidad */
+}
+
+.flex-item:nth-child(2) {
+  flex: 0 0 40%;
+  /* Segunda columna, ocupa el 40% del contenedor */
+  padding: 20px;
+}
+
+
+
+.flex-item:nth-child(3) {
+  flex: 0 0 20%;
+  /* Tercera columna, ocupa el 20% del contenedor */
+  padding: 20px;
+  height: 100%
+}
+
+/* Línea fina debajo del título REDES */
+.line-separator {
+  border: 0;
+  height: 1px;
+  /* Aumentamos el grosor */
+  background-color: #929292;
+  /* Color visible en fondo oscuro */
+}
+
+/* Iconos de Redes Sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  margin-bottom: 15%;
+}
+
+.social-icon i {
+  font-size: 30px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icon i:hover {
+  color: #FF9500;
+  /* Puedes cambiar este color */
+  transform: scale(1.2);
+  /* Aumenta el tamaño del icono al 120% */
+}
+
+/* Texto Webs Afiliadas */
+.webs-afiliadas p {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* Enlaces centrados, uno debajo del otro */
+.centered-links {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.centered-links a {
+  color: #FF9500;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px 0;
+  display: block;
+  /* Esto pone los enlaces uno debajo del otro */
+}
+
+.centered-links a:hover {
+  color: orange;
+}
+
+/* Título ARCHIVOS */
+.archivos-title {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Estilo para el desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.dropdown-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(175, 175, 175);
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  /* Asegura que el botón ocupe todo el ancho del contenedor */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid #505050;
+  /* Bordes del recuadro */
+  top: 100%;
+  /* Posiciona el desplegable debajo del botón */
+  margin-top: 5px;
+  /* Espacio entre el botón y las opciones */
+  max-height: 300px;
+  /* Limita la altura para evitar desbordamientos */
+  overflow-y: auto;
+  /* Añade scroll si hay muchas opciones */
+}
+
+.dropdown-content a {
+  color: rgb(175, 175, 175);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+.dropdown-content a:hover {
+  background-color: #3649ee;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
